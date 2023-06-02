@@ -1,21 +1,19 @@
 #importamos
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk
 from tkinter.font import BOLD
 import util.generic as utl
-from forms.form_master import MasterPanel
 
-class App:
+class FormLoginDesigner  :
 
     #creamos un metodo para hacer la verificacion de la contraseña
     def verificar(self):
-        usu = self.usuario.get()
-        password = self.password.get()
-        if(usu == "root" and password == "1234") :
-            self.ventana.destroy()
-            MasterPanel()
-        else:
-            messagebox.showerror(message= "La contraseña no es correcta", title="Mensaje")
+        pass 
+
+    #creamos un metodo nuevo
+    def userRegister(self):
+        pass 
+
 
     #constructor
     def __init__(self):
@@ -69,6 +67,12 @@ class App:
         inicio.pack(fill = tk.X, padx =20, pady= 5)
         #el bind es para cachar un evento si le damos click verificamos con un lambda se llama a la funcion 
         inicio.bind("<Return>", (lambda event: self.verificar()))
+
+        #creamos otro boton
+        inicio = tk.Button(frame_form_fill, text="Registrar usuario", font=('Times', 15),bg='#3a7ff6', bd=0, fg="#fff", command=self.userRegister)
+        inicio.pack(fill = tk.X, padx =20, pady= 20)
+        #el bind es para cachar un evento si le damos click verificamos con un lambda se llama a la funcion 
+        inicio.bind("<Return>", (lambda event: self.userRegister()))
 
         self.ventana.mainloop()
 
