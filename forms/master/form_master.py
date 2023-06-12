@@ -24,7 +24,7 @@ class MasterPanel:
         self.barraMenu.add_cascade(label="Empleados") 
         self.barraMenu.add_cascade(label="informe") 
         
-        logo =utl.leer_imagen("./imagenes/pokemon.png", (200, 200))
+        logo =utl.leer_imagen("./imagenes/logoChurrasqueria.png", (200, 200))
         
 
         label = tk.Label( self.ventana, image=logo,bg='#3a7ff6' )

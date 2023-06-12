@@ -13,6 +13,8 @@ class nosotros:
         self.ventana.destroy()
         mas.MasterPanel()
 
+  
+
     def __init__(self):        
      
 
@@ -33,10 +35,14 @@ class nosotros:
         #aqui creamos la barra scroll para bajar y subir una lisbox
         listbox = tk.Listbox()
         listbox.insert(tk.END, *(f"Elemento {i}" for i in range(100)))
-        scrollbar = ttk.Scrollbar(orient=tk.VERTICAL, command=listbox.yview)
+        scrollbar = ttk.Scrollbar(self.ventana,orient=tk.VERTICAL,
+                                   command = listbox.yview)
         listbox.config(yscrollcommand=scrollbar.set)
         listbox.pack(expand=tk.YES, fill=tk.BOTH)
         scrollbar.place(x=1500,y=10,height=725)
 
+        etiqueta = tk.Label(self.ventana,text="asdjfkjsadkflsajdf", bg="red", fg="white")
+       
+        etiqueta.pack()
 
         self.ventana.mainloop()
