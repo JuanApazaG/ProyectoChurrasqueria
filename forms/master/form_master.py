@@ -16,7 +16,7 @@ class MasterPanel:
         w, h = self.ventana.winfo_screenwidth(), self.ventana.winfo_screenheight()                                    
         self.ventana.geometry("%dx%d+0+0" % (w, h))
         self.barraMenu = tk.Menu(self.ventana)
-        self.ventana.config(bg='#fcfcfc', menu=self.barraMenu)
+        self.ventana.config(bg='#222831', menu=self.barraMenu)
         #self.ventana.resizable(width=0, height=0)            
         
         self.barraMenu.add_cascade(label="Menu",)
@@ -25,11 +25,11 @@ class MasterPanel:
         self.barraMenu.add_cascade(label="Contacto") 
 
         logo =utl.leer_imagen("./imagenes/logoChurrasqueria.png", (200, 200))
+        label = tk.Label( self.ventana, image=logo,bg='#222831' )
+        label.place(x=300,y=0)
         
-
-        label = tk.Label( self.ventana, image=logo,bg='#3a7ff6' )
-        label.place(x=0,y=0,relwidth=1, relheight=1)
-        
-
+        logo1 =utl.leer_imagen("./imagenes/pokemon.png", (200, 200))
+        label = tk.Label( self.ventana, image=logo1,bg='#222831' )
+        label.place(x=0,y=0)
 
         self.ventana.mainloop()
