@@ -20,7 +20,7 @@ class FormLoginDesigner():
         self.ventana.resizable(width=0, height=0)
         utl.centrar_ventana(self.ventana, 800, 500)
 
-        logo = utl.leer_imagen("./imagenes/logo.png", (200, 200))
+        logo = utl.leer_imagen("./imagenes/logoChurrasqueria.png", (200, 200))
         # frame_logo
         frame_logo = tk.Frame(self.ventana, bd=0, width=300,
                               relief=tk.SOLID, padx=10, pady=10, bg='#3a7ff6')
@@ -52,7 +52,7 @@ class FormLoginDesigner():
             'Times', 14), fg="#666a88", bg='#fcfcfc', anchor="w")
         etiqueta_usuario.pack(fill=tk.X, padx=20, pady=5)
         self.usuario = ttk.Entry(frame_form_fill, font=('Times', 14), textvariable="hola")
-        self.usuario.insert(0, "root")
+        self.usuario.insert(0, "agustin")
         self.usuario.pack(fill=tk.X, padx=20, pady=10)
 
         etiqueta_password = tk.Label(frame_form_fill, text="Contraseña", font=(
@@ -60,6 +60,7 @@ class FormLoginDesigner():
         etiqueta_password.pack(fill=tk.X, padx=20, pady=5)
         self.password = ttk.Entry(frame_form_fill, font=('Times', 14))
         self.password.pack(fill=tk.X, padx=20, pady=10)
+        self.password.insert(0, "1234")
         self.password.config(show="*")
 
         inicio = tk.Button(frame_form_fill, text="Iniciar sesion", font=(
