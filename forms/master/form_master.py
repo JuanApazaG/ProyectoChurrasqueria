@@ -19,11 +19,11 @@ class MasterPanel:
         self.ventana.config(bg='#fcfcfc', menu=self.barraMenu)
         #self.ventana.resizable(width=0, height=0)            
         
-        self.barraMenu.add_cascade(label="menu",)
-        self.barraMenu.add_cascade(label="nosotros", command=self.nosotros) 
-        self.barraMenu.add_cascade(label="Empleados") 
-        self.barraMenu.add_cascade(label="informe") 
-        
+        self.barraMenu.add_cascade(label="Menu",)
+        self.barraMenu.add_cascade(label="Nosotros", command=self.nosotros) 
+        self.barraMenu.add_cascade(label="Carta") 
+        self.barraMenu.add_cascade(label="Contacto") 
+
         logo =utl.leer_imagen("./imagenes/logoChurrasqueria.png", (200, 200))
         
 
