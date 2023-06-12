@@ -20,7 +20,7 @@ class MasterPanel:
         #self.ventana.resizable(width=0, height=0)            
         
         self.barraMenu.add_cascade(label="menu",)
-        self.barraMenu.add_cascade(label="regitrar", command=self.nosotros) 
+        self.barraMenu.add_cascade(label="nosotros", command=self.nosotros) 
         self.barraMenu.add_cascade(label="Empleados") 
         self.barraMenu.add_cascade(label="informe") 
         
